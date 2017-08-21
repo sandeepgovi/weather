@@ -1,0 +1,14 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h3 class="panel-title">{{ convertDate({date: weatherObj.dt}) |
+			date: dateFormat }}</h3>
+	</div>
+	<div class="panel-body">
+		<label><span class="badge"></span>Max:</label> {{ convertTemp({temp:
+		weatherObj.temp.day}) }} &deg;F <label><span class="badge"></span>Min:</label>
+		{{ convertTemp({temp: weatherObj.temp.night}) }} &deg;F <label ><span
+			class="badge"></span>Chance of Rain: {{ weatherObj.rain }}%</label>
+
+	</div>
+	<div class="panel-body"></div>
+</div>

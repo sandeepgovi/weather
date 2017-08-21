@@ -1,0 +1,20 @@
+<div class="page-header">
+	<h4 class="text-center" class="text-capitalize">Weather Forecast
+		for next {{ days }} days in {{ weatherResult.city.name }}</h4>
+</div>
+
+<div ng-repeat="weather in weatherResult.list">
+
+	<div class="row">
+		<div class="col-md-12">
+			<weather-directive weather-obj="weather"
+				convert-date="convertToDate(date)" date-format="MMMM d, y"
+				convert-temp="convertToFahrenheit(temp)">
+			</weather-directive>
+
+
+		</div>
+	</div>
+
+
+</div>
